@@ -1,0 +1,3 @@
+[submodule "vendors/MUSE"]
+	path = vendors/MUSE
+	url = git@github.com:sedflix/MUSE.git
