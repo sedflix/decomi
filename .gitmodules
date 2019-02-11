@@ -1,3 +1,9 @@
 [submodule "vendors/MUSE"]
 	path = vendors/MUSE
 	url = git@github.com:sedflix/MUSE.git
+[submodule "vendors/LASER"]
+	path = vendors/LASER
+	url = git@github.com:sedflix/LASER.git
+[submodule "vendors/UnsupervisedMT"]
+	path = vendors/UnsupervisedMT
+	url = git@github.com:sedflix/UnsupervisedMT.git
