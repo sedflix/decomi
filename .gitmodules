@@ -7,3 +7,6 @@
 [submodule "vendors/UnsupervisedMT"]
 	path = vendors/UnsupervisedMT
 	url = git@github.com:sedflix/UnsupervisedMT.git
+[submodule "vendors/XLM"]
+	path = vendors/XLM
+	url = git@github.com:sedlfix/XLM.git
