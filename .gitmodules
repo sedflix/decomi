@@ -10,3 +10,6 @@
 [submodule "vendors/XLM"]
 	path = vendors/XLM
 	url = git@github.com:sedlfix/XLM.git
+[submodule "vendors/language-models"]
+	path = vendors/language-models
+	url = git@github.com:pbloem/language-models.git
