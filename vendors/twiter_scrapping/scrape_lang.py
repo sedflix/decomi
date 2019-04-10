@@ -1,3 +1,9 @@
+"""
+python scrape_lang.py lang_id
+where lang_id = en or es or anyother
+it reads most common words from common_<lang_id>.txt and writes result to result_<lang_id>.txt
+"""
+
 import sys
 
 from tqdm import tqdm
