@@ -10,12 +10,6 @@
 [submodule "vendors/XLM"]
 	path = vendors/XLM
 	url = git@github.com:sedlfix/XLM.git
-[submodule "vendors/language-models"]
-	path = vendors/language-models
-	url = git@github.com:pbloem/language-models.git
 [submodule "vendors/language-models/SentEval"]
 	path = vendors/language-models/SentEval
 	url = git@github.com:facebookresearch/SentEval.git
-[submodule "vendors/ELMo-keras"]
-	path = vendors/ELMo-keras
-	url = https://github.com/iliaschalkidis/ELMo-keras/
