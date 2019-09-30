@@ -8,7 +8,7 @@ from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras.constraints import MinMaxNorm
 from keras.layers import Dense, Input, SpatialDropout1D
 from keras.layers import LSTM, CuDNNLSTM, Activation
-from keras.layers import Lambda, Embedding, Conv2D, GlobalMaxPool1D
+from keras.layers import Lambda, Embedding, Conv2D, GlobalMaxPool1D, Convolution1D, MaxPooling1D
 from keras.layers import add, concatenate
 from keras.layers.wrappers import TimeDistributed
 from keras.models import Model, load_model
@@ -94,8 +94,28 @@ class ELMo(object):
         if self.parameters['token_encoding'] == 'word':
             # Train word embeddings from scratch
             word_inputs = Input(shape=(None,), name='word_indices', dtype='int32')
-            embeddings = Embedding(self.parameters['vocab_size'], self.parameters['hidden_units_size'], trainable=True, name='token_encoding')
-            inputs = embeddings(word_inputs)
+
+            if self.parameters['subwords']:
+                embeddings = Embedding(self.parameters['vocab_size'],
+                                       self.parameters['hidden_units_size'],
+                                       trainable=True,
+                                       # weights=[self.parameters['subword_weight']],
+                                       name='token_encoding')
+
+                inputs = embeddings(word_inputs)
+
+                inputs = Convolution1D(filters=self.parameters['filters'],
+                                       kernel_size=self.parameters['kernel_size'],
+                                       border_mode='valid',
+                                       activation='relu',
+                                       subsample_length=1)(inputs)
+                inputs = MaxPooling1D(pool_length=self.parameters['pool_length'])(inputs)
+
+
+            else:
+                embeddings = Embedding(self.parameters['vocab_size'], self.parameters['hidden_units_size'],
+                                       trainable=True, name='token_encoding')
+                inputs = embeddings(word_inputs)
 
             # Token embeddings for Input
             drop_inputs = SpatialDropout1D(self.parameters['dropout_rate'])(inputs)
