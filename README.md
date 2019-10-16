@@ -10,3 +10,4 @@ Important to-dos:
 - [ ] : fix perplexity calculation
 - [ ] : decide what kind of modification will we be doing on girnet
 - [ ] : fixed other datasets to test sentiment analysis results on
+- [ ] : train girnet with prefixed embeddings: like MUSE, MultiEmbd, FastBPE
