@@ -12,4 +12,5 @@ Important to-dos:
 - [ ] : fixed other datasets to test sentiment analysis results on
   - [ ] : get two types of dataset for hindi: in devnagri script and in english script
   - [ ] : in multi-lingual BPEmd include code-mixed data and train
+  - [ ] : senti-ment analysis for hindi dataset
 - [ ] : train girnet with prefixed embeddings: like MUSE, MultiEmbd, FastBPE
