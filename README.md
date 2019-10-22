@@ -10,4 +10,6 @@ Important to-dos:
 - [ ] : fix perplexity calculation
 - [ ] : decide what kind of modification will we be doing on girnet
 - [ ] : fixed other datasets to test sentiment analysis results on
+  - [ ] : get two types of dataset for hindi: in devnagri script and in english script
+  - [ ] : in multi-lingual BPEmd include code-mixed data and train
 - [ ] : train girnet with prefixed embeddings: like MUSE, MultiEmbd, FastBPE
