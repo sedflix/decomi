@@ -1,16 +1,13 @@
 # decomi
 
-Papers that can be  useful can be found here: https://github.com/sedflix/decomi/wiki/Papers
+This repo is a combination of several experiments that were used to explore unsupervised learning on code-mixed data.
+In particular, it consists usage of several methods to make language models and do sentiment analysis. 
+`vendors` consist of several subfolders, some which are forks of external projects like MUSE and LASER and others include some important part of the project like language models and twitter scrapping.
 
-What important thinks have been done? 
-- We have run vanilla-lstm, mtl-lstm, awd-lstm, and girnet lstm on our code mixed data.
-- We have used LASER, MUSE, GirNet, fasttext embedding and MultiEmbedding on sentiment analysis(EN-ES)
+[Here](https://github.com/sedflix/decomi/wiki/Papers) you can find a list of useful papers for this area.
 
-Important to-dos:
-- [ ] : fix perplexity calculation
-- [ ] : decide what kind of modification will we be doing on girnet
-- [ ] : fixed other datasets to test sentiment analysis results on
-  - [ ] : get two types of dataset for hindi: in devnagri script and in english script
-  - [ ] : in multi-lingual BPEmd include code-mixed data and train
-  - [ ] : senti-ment analysis for hindi dataset
-- [ ] : train girnet with prefixed embeddings: like MUSE, MultiEmbd, FastBPE
+
+## Data
+
+For access to data, please contact Siddharth Yadav(siddharth16268 @ iiitd.ac.in)
+
